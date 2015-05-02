@@ -1,5 +1,4 @@
 class JobsController < ApplicationController
-
   def create
     date = date_today
     activity = params[:activity]
@@ -19,6 +18,7 @@ class JobsController < ApplicationController
   end
 
   private
+
     def contacted_params
       params.require(:contacted).permit(:date, :activity, :comment)
     end

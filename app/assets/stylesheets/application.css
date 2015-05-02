@@ -19,16 +19,16 @@
 }
 
 .clickable{
-	cursor: pointer;
-	cursor: hand!important;
+  cursor: pointer;
+  cursor: hand!important;
 }
 
 #members_list_contacted{
-	cursor: pointer;
-	cursor: hand!important;
+  cursor: pointer;
+  cursor: hand!important;
 }
 
 #members_list_worked{
-	cursor: pointer;
-	cursor: hand!important;
+  cursor: pointer;
+  cursor: hand!important;
 }

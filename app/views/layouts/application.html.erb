@@ -3,20 +3,20 @@
 <head>
   <title>Skanken</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-	<!-- bootstrap.min.js -->
+  <!-- bootstrap.min.js -->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-	<div class="container">
-		<header>
-		  <%= render :partial => 'members/navbar' %>
-		</header>
+  <div class="container">
+    <header>
+      <%= render :partial => 'members/navbar' %>
+    </header>
 
-		<%= yield %>
-	</div>
+    <%= yield %>
+  </div>
 </body>
 </html>
