@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
     # get 'members/search/:search' => 'members#search'
-    
+
     get 'creators', to: 'members#creators'
 
     get 'admin', to: 'members#admin'

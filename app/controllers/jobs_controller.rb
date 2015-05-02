@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-	
+
   def create
     date = date_today
     activity = params[:activity]
@@ -14,7 +14,7 @@ class JobsController < ApplicationController
   def destroy
     @member = Member.find(params[:member_id])
     @contacted = @member.contacteds.find(params[:id])
-    @contacted.destroy   
+    @contacted.destroy
     redirect_to members_path
   end
 

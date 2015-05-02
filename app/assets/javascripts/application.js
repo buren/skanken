@@ -74,7 +74,7 @@ function sortTable(rowNumber){
     var sortnr = parseFloat(rows[0].cells[rowNumber].textContent.trim() || rows[0].cells[rowNumber].innerText);
     if(!isNaN(sortnr)){
     	store.push([sortnr, rows]);
-    } 
+    }
 		rows = null;
   }
 	var order_desc = store[0][0] > store[store.length-1][0];
@@ -89,7 +89,7 @@ function sortTable(rowNumber){
   for(var i=0; i<store.length; i++){
   	var rows = store[i][1];
   	for(var k=0, len=rows.length; k<len; k++){
-  		tbl.appendChild(rows[k]);	
+  		tbl.appendChild(rows[k]);
   	}
   }
   store = null;
@@ -111,7 +111,7 @@ function sortTable(rowNumber){
 // 		    var sortnr = parseFloat(row.cells[3].textContent || row.cells[3].innerText);
 // 		    if(!isNaN(sortnr)){
 // 		    	store.push([sortnr, row, info_rows]);
-// 		    } 
+// 		    }
 // 		}
 //   }
 //   store.sort(function(x,y){

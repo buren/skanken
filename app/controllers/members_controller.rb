@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
 
-	before_filter :authenticate_user!	
+	before_filter :authenticate_user!
 
 	def index
     @members = Member.all
@@ -16,7 +16,7 @@ class MembersController < ApplicationController
 		end
 
 		workerParams = member_params.merge(:dateAdded => date_today, :workCard => "No card", :term => term, :work => activities.to_s)
-		
+
 		@member = Member.new(workerParams)
 	  @member.save
 	  redirect_to members_path
@@ -40,14 +40,14 @@ class MembersController < ApplicationController
 
 	def destroy
 	  @member = Member.find(params[:id])
-	  @member.destroy	 
+	  @member.destroy
 	  redirect_to members_path
 	end
 
 	def creators
 	end
 
-	def admin	
+	def admin
 	end
 
 	def import
@@ -56,7 +56,7 @@ class MembersController < ApplicationController
 		redirect_to admin_path
 	end
 
-	private 
+	private
 		def add_activities
 			activities = Array.new
 			# clubs and bars
@@ -79,14 +79,14 @@ class MembersController < ApplicationController
 		end
 
 
-	private 
+	private
 		def add_activity(activity, activities_array)
 			if params.has_key?(activity)
 
 				activity_name_unformated = activity.to_s.split('_')[1]
 				activity_name_formated = activity_name_unformated.slice(0,1).capitalize + activity_name_unformated.slice(1..-1)
 				activities_array.push(activity_name_formated)
-			end			
+			end
 			return activities_array
 		end
 

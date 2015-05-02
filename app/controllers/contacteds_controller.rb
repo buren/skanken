@@ -1,5 +1,5 @@
 class ContactedsController < ApplicationController
-	
+
   def create
     date = date_today
     activity = params[:activity]
@@ -14,10 +14,10 @@ class ContactedsController < ApplicationController
   def destroy
   	@member = Member.find(params[:member_id])
     @contacted = @member.contacteds.find(params[:id])
-	  @contacted.destroy	 
+	  @contacted.destroy
 	  redirect_to members_path
   end
- 
+
   private
     def contacted_params
       params.require(:contacted).permit(:date, :activity, :comment)

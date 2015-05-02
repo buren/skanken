@@ -7,4 +7,3 @@ class CreateMembers < ActiveRecord::Migration
     end
   end
 end
-	

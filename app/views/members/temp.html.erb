@@ -1,7 +1,7 @@
 <h1>Editing member</h1>
- 
+
 <%= form_for @member, url: member_path(@member) do |f| %>
- 
+
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -50,7 +50,7 @@
   <p>
     <%= f.submit :value => "Update Worker" %>
   </p>
- 
+
 <% end %>
- 
+
 <%= link_to 'Back', members_path %>
